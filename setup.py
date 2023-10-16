@@ -6,7 +6,7 @@ setup_args = {
     "description": "OCP CAD Viewer for VSCode",
     "long_description": "An extension to show OCP cad CAD objects (CadQuery, build123d) in VS Code via pythreejs",
     "include_package_data": True,
-    "python_requires": ">=3.9",
+    "python_requires": ">=3.8",
     "install_requires": [
         "ocp-tessellate>=1.1.2,<1.2.2",
         "requests",
