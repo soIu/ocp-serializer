@@ -10,7 +10,7 @@ setup_args = {
     "install_requires": [
         "ocp-tessellate>=2.2.2,<2.3.0",
         "requests",
-        "ipykernel",
+        #"ipykernel",
         "orjson",
         "websockets>=11.0,<11.1",
     ],
