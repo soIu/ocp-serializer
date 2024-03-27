@@ -552,6 +552,8 @@ def show(
         else:
             LAST_CALL = "other"
 
+    return data
+
     with Timer(timeit, "", "send"):
         send_data(t, port=port, timeit=timeit)
 
