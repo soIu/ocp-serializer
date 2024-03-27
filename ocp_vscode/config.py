@@ -415,8 +415,14 @@ def status(port=None, debug=False):
             "Cannot access viewer status. Is the viewer running?\n" + str(ex.args)
         ) from ex
 
+global_config = {}
+global_config.update(DEFAULTS)
+global_config.update({key: None for key in CONFIG_KEYS})
+global_config['collapse'] = Collapse.NONE
+global_config['explode'] = True
 
 def workspace_config(port=None):
+    return global_config
     """Get viewer workspace config"""
     if port is None:
         port = get_port()
@@ -442,6 +448,7 @@ def workspace_config(port=None):
 
 
 def combined_config(port=None, use_status=True):
+    return global_config
     """Get combined config from workspace and status"""
     if port is None:
         port = get_port()
