@@ -418,6 +418,7 @@ def status(port=None, debug=False):
 global_config = {}
 global_config.update(DEFAULTS)
 global_config.update({key: None for key in CONFIG_KEYS})
+global_config.update(DEFAULTS)
 global_config['collapse'] = Collapse.NONE
 global_config['explode'] = True
 
